@@ -1,4 +1,22 @@
+# Snake-Water-Gun Game In Python
+
+## Introduction
+
+This is a simple Snake-Water-Gun game implemented in Python. It allows the player to play against the computer for a specified number of rounds.
+
+## How to Play
+
+1. Clone the repository to your local machine.
+2. Navigate to the directory containing the Python script.
+3. Run the script using a Python interpreter (`python script_name.py`).
+4. Follow the on-screen instructions to play the game.
+
+## Code
+
+```python
+# Import random Library
 import random
+
 # Function for the game
 def game():
     choices = ["snake", "water", "gun"]
@@ -13,7 +31,7 @@ def game():
     player_point = 0
     computer_point = 0
 
-# Loop that runs until the number of rounds condition gets satisfied
+    # Loop that runs until the number of rounds condition gets satisfied
     for i in range(x):
         player_choice = input("Enter your choice (1/2/3): ")
 
@@ -31,7 +49,7 @@ def game():
         print("Computer chose:", computer_choice)
         if player_choice == computer_choice:
             print("It's a tie!")
-# Increment the Player_point or Computer_point with 1 if a point is scored
+            # Increment the Player_point or Computer_point with 1 if a point is scored
         elif player_choice == "snake":
             if computer_choice == "water":
                 print("You win!")
