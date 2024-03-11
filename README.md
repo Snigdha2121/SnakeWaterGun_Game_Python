@@ -1,11 +1,10 @@
-# python-for-beginners
 import random
-
+# Function for the game
 def game():
     choices = ["snake", "water", "gun"]
     computer_choice = random.choice(choices)
     print("Snake, Water, Gun Game")
-    x= int(input("The game should be of how many points? "))
+    x= int(input("The game should be of how many rounds? "))
     print("Choose your weapon: ")
     print("1. Snake")
     print("2. Water")
@@ -14,6 +13,7 @@ def game():
     player_point = 0
     computer_point = 0
 
+# Loop that runs until the number of rounds condition gets satisfied
     for i in range(x):
         player_choice = input("Enter your choice (1/2/3): ")
 
@@ -31,7 +31,7 @@ def game():
         print("Computer chose:", computer_choice)
         if player_choice == computer_choice:
             print("It's a tie!")
-
+# Increment the Player_point or Computer_point with 1 if a point is scored
         elif player_choice == "snake":
             if computer_choice == "water":
                 print("You win!")
@@ -55,11 +55,11 @@ def game():
                 computer_point += 1
     
     if player_point <= computer_point:
-        print("Computer Wins the game")
+        print("\n GAME OVER \n Computer Wins the game")
     elif player_point >= computer_point:
-        print("You won the game")
+        print("\n GAME OVER \n You won the game")
     else:
-        print("It is a TIE")
+        print("\n GAME OVER \n It is a TIE")
 
 while True:
     game()
